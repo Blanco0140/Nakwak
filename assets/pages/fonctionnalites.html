@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Nakwak - Bot Discord</title>
+</head>
+<body>
+    <img src="https://cdn.discordapp.com/avatars/1100442999181295626/aee3a41d1938a212048d20e032e8d571.webp?size=1024&format=webp&width=0&height=256" alt="Bot Nakwak" class="bot-image" />
+
+    <header>
+        <h1>Bienvenue sur la page de Nakwak</h1>
+        <p>Le bot Discord qui rend votre serveur encore plus amusant !</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../../index.html">🏠 Accueil</a></li>
+            <li><a href="fonctionnalites.html">🤖 Fonctionnalités</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="fonctionnalites">
+            <h2>🤖 Fonctionnalités de Nakwak</h2>
+            <p>Nakwak est un bot Discord polyvalent, conçu pour faciliter la gestion de votre serveur. Développé en <strong>JavaScript</strong> avec la bibliothèque <strong>Discord.js</strong>, il offre une gamme de fonctionnalités pour améliorer l'interaction des utilisateurs et la modération des serveurs.</p>
+            <p>Créé par <strong>@blanco140</strong>, Nakwak est le compagnon idéal pour les administrateurs de serveurs Discord, permettant une gestion fluide et efficace des différentes tâches.</p>
+            
+
+        <section id="commandes">
+            <h3>📜 Liste des Commandes et Descriptions :</h3>
+            <ul>
+                <li><code>$setup</code>: Configure les rôles de staff pour le serveur.</li>
+                <li><code>$mpall [message]</code>: Envoie un message privé à tous les membres du serveur.</li>
+                <li><code>$giveroles [ID du rôle]</code>: Ajoute le rôle spécifié à tous les membres éligibles du serveur.</li>
+                <li><code>$setprefix [nouveau préfixe]</code>: Change le préfixe utilisé pour les commandes du bot.</li>
+                <li><code>$ban [ID ou mention de l'utilisateur] [raison]</code>: Bannit l'utilisateur spécifié du serveur.</li>
+                <li><code>$unban [ID de l'utilisateur]</code>: Débannit l'utilisateur spécifié.</li>
+                <li><code>$kick [ID ou mention de l'utilisateur] [raison]</code>: Expulse l'utilisateur spécifié du serveur.</li>
+                <li><code>$mute [ID ou mention de l'utilisateur] [raison]</code>: Mute l'utilisateur spécifié en lui attribuant le rôle "Muted".</li>
+                <li><code>$unmute [ID ou mention de l'utilisateur]</code>: Démute l'utilisateur spécifié en retirant le rôle "Muted".</li>
+                <li><code>$banlist</code>: Affiche une liste de tous les utilisateurs bannis du serveur.</li>
+                <li><code>$channelrole [mention du rôle]</code>: Retire toutes les permissions du rôle mentionné dans tous les canaux du serveur.</li>
+                <li><code>$clear [nombre]</code>: Supprime le nombre spécifié de messages du canal.</li>
+                <li><code>$unbanall</code>: Débannit tous les utilisateurs actuellement bannis du serveur.</li>
+                <li><code>$tweet [message]</code>: Envoie un tweet avec le message spécifié, et vous pouvez joindre des images.</li>
+                <li><code>$leaveguild [ID du serveur]</code>: Quitte un serveur à l'aide de l'ID du serveur.</li>
+                <li><code>$chadd [ID du salon]</code>: Ajoute un salon spécifique à une catégorie.</li>
+                <li><code>$chrem [ID du salon]</code>: Supprime un salon spécifique d'une catégorie.</li>
+                <li><code>$presserv</code>: Affiche la présentation du serveur.</li>
+                <li><code>$help</code>: Affiche toutes les commandes disponibles.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🌟 Témoignages</h2>
+            <p>"Nakwak a complètement transformé notre serveur, la gestion est devenue un jeu d'enfant!" - <em>Utilisateur Satisfait</em></p>
+            <p>"Un outil incroyable pour les administrateurs, je ne pourrais plus m'en passer!" - <em>Admin de Serveur</em></p>
+        </section>
+        
+        <section>
+            <h2>❓ FAQ</h2>
+            <p><strong>Q : Comment inviter Nakwak sur mon serveur ?</strong></p>
+            <p>R : Cliquez sur le bouton ci-dessous pour inviter Nakwak !</p>
+        </section>
+        
+        <section>
+            <h2>📄 Documentation</h2>
+            <p>Pour plus d'informations et d'assistance, rejoignez notre serveur Discord <a href="https://discord.gg/K2RMtSddjk">ici</a> !</p>
+        </section>
+    </main>
+    
+    <footer style="margin-bottom: 50px;">
+        <button id="invite-btn" aria-label="Inviter Nakwak sur votre serveur">Inviter Nakwak sur votre serveur</button>
+    </footer>
+
+    <button id="scroll-top" title="Remonter en haut" aria-label="Remonter en haut de la page">
+        <img src="../img/arrow.png" alt="Remonter" />
+    </button>
+    <script src="../js/script.js"></script>
+</body>
+</html>

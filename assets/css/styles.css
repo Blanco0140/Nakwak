@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    color: rgba(255, 255, 255, 1); /* Texte à 50% d'opacité */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Meilleure lisibilité */
+    background-color: #0b0d29; /* Couleur de fond au cas où l'image ne se charge pas */
+    position: relative; /* Nécessaire pour le positionnement de l'élément pseudo */
+    min-height: 100vh; /* S'assure que le corps prend au moins la hauteur de la fenêtre */
+}
+
+body::before {
+    content: "";
+    background-image: url('../img/fond-discord2.png'); /* Chemin relatif vers l'image */
+    background-size: cover; /* Recouvre tout le fond */
+    background-position: center; /* Centre l'image */
+    position: fixed; /* Fixe l'élément en arrière-plan */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1; /* Opacité à 100% pour l'image */
+    z-index: -2; /* Met l'image derrière le contenu */
+}
+
+body::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.8); /* Couche noire avec 50% d'opacité */
+    position: fixed; /* Fixe l'élément au-dessus de l'image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Met la couche noire au-dessus de l'image de fond */
+}
+
+main {
+    padding: 80px 20px 20px; /* Ajoute un espace en haut pour éviter que le contenu soit caché par la navbar */
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(31, 34, 53, 0.6); /* Fond du header à 50% d'opacité */
+}
+
+
+section {
+    margin-bottom: 20px;
+}
+
+.bot-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px; /* Ajoute un léger arrondi aux coins */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#invite-btn {
+    padding: 10px 40px;
+    margin-top: 20px;
+    background: linear-gradient(45deg, #3f005280, #6501837e); /* Dégradé */
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s; /* Transition uniquement pour l'échelle */
+    border-radius: 25px; /* Coins arrondis */
+    position: relative; /* Nécessaire pour la position de l'ombre */
+    overflow: hidden; /* Masque l'ombre en dehors du bouton */
+
+    
+}
+
+#invite-btn::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 25px; /* Coins arrondis pour l'ombre */
+    z-index: -1; /* Positionne l'ombre derrière le bouton */
+    animation: breathe 2s infinite; /* Animation de respiration */
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(1); /* Échelle normale */
+        opacity: 0.5; /* Opacité au début */
+    }
+    50% {
+        transform: scale(1.1); /* Légère augmentation de taille au milieu */
+        opacity: 1; /* Opacité maximale au milieu de l'animation */
+    }
+    100% {
+        transform: scale(1); /* Retour à l'échelle normale */
+        opacity: 0.5; /* Opacité de retour à la normale */
+    }
+}
+
+#invite-btn:hover {
+    transform: scale(1.05); /* Grandit de 5% au survol */
+    color: white;
+    background :linear-gradient(45deg, #6501837e, #3f005280);
+    box-shadow: 0 0 60px #5900ff;
+}
+
+#invite-btn:active {
+    transform: scale(1); /* Retour à la taille initiale lorsque cliqué */
+}
+
+
+#scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(31, 34, 53, 1);
+    border: none;
+    cursor: pointer;
+    display: flex; /* Utilise flexbox pour centrer l'image */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    padding: 5px; /* Espacement autour de l'image */
+    border-radius: 5px; /* Coins arrondis pour le bouton */
+    z-index: 10; /* S'assure qu'il est au-dessus des autres éléments */
+}
+
+#scroll-top img {
+    width: 30px; /* Taille de l'image à 10% */
+    height: auto; /* Garde l'aspect ratio de l'image */
+}
+
+#scroll-top:hover {
+    background-color: rgba(42, 46, 75, 1); /* Couleur au survol à 50% d'opacité */
+}
+
+.bot-image {
+    position: fixed; /* Permet de fixer l'image à l'écran */
+    top: 20px; /* Distance du haut de la page */
+    right: 20px; /* Distance du côté droit de la page */
+    width: 128px; /* Largeur de l'image */
+    height: 128pxx; /* Hauteur de l'image */
+    z-index: 10; /* Assure que l'image est au-dessus des autres éléments */
+    border-radius: 10px; /* Ajoute un léger arrondi aux coins */
+    box-shadow: 0 0 30px rgba(140, 0, 255, 0.5); /* Ajoute une ombre pour un effet de profondeur */
+}
+
+nav {
+    background-color: rgba(31, 34, 53, 0); /* Fond semi-transparent */
+    padding: 10px 20px; /* Espacement autour de la navbar */
+    position: absolute; /* Position absolue pour qu'elle soit au-dessus de l'en-tête */
+    top: 0; /* Positionne la navbar en haut */
+    left: 0; /* Aligne à gauche */
+    right: 0; /* Aligne à droite */
+    z-index: 20; /* S'assure qu'elle est au-dessus du contenu, y compris l'en-tête */
+}
+
+
+
+nav ul {
+    list-style: none; /* Supprime les puces de la liste */
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+    margin: 0; /* Supprime la marge par défaut */
+    padding: 0; /* Supprime le remplissage par défaut */
+}
+
+nav ul li {
+    margin-left: 20px; /* Espace entre les éléments de la liste */
+}
+
+nav ul li a {
+    color: white; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 19.2px; /* Taille de la police augmentée de 20% (16px * 1.2) */
+    padding: 5px 10px; /* Espacement intérieur pour les liens */
+    border-radius: 5px; /* Coins arrondis pour un effet doux */
+    transition: background-color 0.3s; /* Transition douce pour l'arrière-plan */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Arrière-plan au survol */
+}
+
+
+
+/* Styles responsifs */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em; /* Ajuste la taille du titre pour les petits écrans */
+    }
+
+    #invite-btn {
+        width: 90%; /* Prend 90% de la largeur sur mobile */
+        margin: 0 auto; /* Centre le bouton */
+    }
+}
